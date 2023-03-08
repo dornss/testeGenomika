@@ -1,3 +1,6 @@
+#Para esta questão, escolhi usar o algorítmo "greedy" de sobreposição de superstrings.
+
+# Função que calcula a sobreposição entre duas strings. Retorna o tamanho da maior sobreposição.
 def overlap(s1, s2):
     maxOverlap = 0
     for i in range(min(len(s1), len(s2))):
@@ -5,12 +8,8 @@ def overlap(s1, s2):
             maxOverlap = i
     return maxOverlap
 
-
+#Função que realiza o processo de merging de strings. Retorna a superstring resultante.
 def mergeReads(reads):
-    """
-    Função que realiza o processo de merging de strings.
-    Retorna a superstring resultante.
-    """
     while len(reads) > 1:
         maxOverlap = 0
         for i in range(len(reads)):
